@@ -1,0 +1,91 @@
+
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\begin{titlepage}
+	\newgeometry{
+		a4paper,
+		left=   1cm,
+		right=  1cm,
+		top=    1.2cm,
+		bottom= 1.2cm,
+	}
+	%\hbox{
+	%\hspace*{0.05\textwidth}
+	%\begin{tabular}{c c c}
+	%\hspace*{-1.5cm}
+	%\includegraphics[scale=0.17]{FIGURES/TITLE-PAGE/uaslplogo.png}    & 
+	%\begin{tabular}{ c }
+	%\hline\hline\\
+	%{\Large Universidad Autónoma de San Luis Potosí  }\\\\
+	%{\Large \centering \bfseries  Facultad de Ciencias                               }\\
+	%\hline\hline\\
+	%\end{tabular} & 
+	%\hspace*{0cm}
+	%\includegraphics[scale=0.17]{FIGURES/TITLE-PAGE/cienciaslogo.png} \\ 
+	%\end{tabular} 
+	%}
+	
+	
+	%\vspace{0cm}
+	%\vbox{
+	%\hspace*{0.07\textwidth} % Whitespace to the left of the title page
+	%\rule{1.5pt}{0.8\textheight} 
+	%\rule{1.5pt}{0.8\textheight}% Vertical line
+	%\hspace*{-1cm} % Whitespace between the vertical line and title page text
+	%\parbox[b]{\textwidth}
+	%{ 
+	% Paragraph box which restricts text to less than the width of the page
+	
+	\begin{tikzpicture}[remember picture, overlay]
+		
+		\node[anchor=north west,xshift=15mm,yshift=-20mm](uaslp) at (current page.north west){\includegraphics[scale=0.25]{FIGURES/TITLE-PAGE/uaslplogo2}};
+		\node[anchor=north east,xshift=-15mm,yshift=-20mm](fc) at (current page.north east){\includegraphics[scale=0.25]{FIGURES/TITLE-PAGE/fclogo}};
+		
+		\draw[line width=0.7mm] (uaslp.south)--([yshift=-20cm]uaslp.south);
+		\draw[line width=0.7mm] ([xshift=1.5mm]uaslp.south)--([xshift=1.5mm,yshift=-20cm]uaslp.south);
+		
+		\draw[line width=0.7mm] ([yshift=-7mm]uaslp.north east)--([yshift=-7mm]fc.north west);
+		\draw[line width=0.7mm] ([yshift=-8.5mm]uaslp.north east)--([yshift=-8.5mm]fc.north west);
+		
+		\draw[line width=0.7mm] ([yshift=2mm]uaslp.south east)--([yshift=2mm]fc.south west);
+		\draw[line width=0.7mm] ([yshift=3.5mm]uaslp.south east)--([yshift=3.5mm]fc.south west);
+		
+		\node[font=\bfseries,scale=1.25,anchor=north,yshift=-2.75cm](l1) at (current page.north){Universidad Autónoma de San Luis Potosí};
+		\node[font=\bfseries,scale=1.25,anchor=north,yshift=0mm](l2) at (l1.south){ Facultad de Ciencias};
+		
+		\node[scale=1.5,font=\bfseries,text width=0.6\linewidth,align=center,anchor=center,yshift=4.2cm,xshift=6mm](title) at (current page.center){Study of optical properties of two-dimensional and one-dimensional systems at the microscopic level: Polarization effects};
+		
+		\node[scale=1.4, anchor=north,yshift=-10mm, text width=7cm, align=center](l3) at (title.south)  {Thesis \vspace{0.7cm} \\
+			To obtain the degree of \vspace{0.7cm} \\ \textbf{PhD. in Applied Sciences} \vspace{0.7cm} \\ by: };
+		
+		\node[font=\bfseries,scale=1.5,anchor=north,yshift=-5mm](author) at (l3.south){Gabriela Flores Rangel};
+		
+		\node[scale=1.25,anchor=north,yshift=-5mm](supvisors) at (author.south){Supervisors:};
+		
+		\node[scale=1.25,anchor=north,yshift=-5mm](supvisor1) at (supvisors.south){Dr. Luis Felipe Lastras Mart\'inez};
+		\node[scale=1.25,anchor=north,yshift=-2mm](supvisor2) at (supvisor1.south){Dr. Ricardo Castro Garc\'ia};
+		\node[scale=1.2,anchor=south,yshift=-25mm](city) at (supvisor2.south) {\textsc{San Luis Potos\'i, S.L.P. M\'exico} };
+		\node[scale=1.2,anchor=north,yshift=0mm](year) at (city.south) {\textsc{August 2022}  };
+		
+		
+		
+		
+		l\end{tikzpicture}
+	%{\Large  Tesis}\\[2\baselineskip] % Tagline or further description
+	%{\Large  Que para obtener el grado de }\\\vspace{1cm}
+	%{\Large \bfseries \textsc{Doctor en Ciencias Aplicadas} }\\\vspace{1cm} % Tagline or further des
+	%{\Large \textsc{ PRESENTA }}\\\vspace{1cm}
+	%{\Large  \bfseries  Oscar Ruiz Cigarrillo} \\\vspace{1cm}% Author name
+	%{\Large Asesores de Tesis: }\\\vspace{0.5cm}
+	%{\Large Dr. Luis Felipe Lastras Martínez }\\\vspace{0.5cm}
+	%{\Large Dr. Edgar Armando Cerda Méndez }\\\vspace{0.5cm}
+	%{\large \textsc{San Luis Potosí,S.L.P. México} }\\\vspace{0.5cm}
+	%{\large \textsc{Agosto 2020} }
+	
+	
+	%\vspace{0.05\textheight}
+	%}
+	%}
+\end{titlepage}

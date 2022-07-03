@@ -1,0 +1,161 @@
+% !TeX document-id = {2e1841e8-ce56-4d5c-95b9-f6ac1d5fc83f}
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+\RequirePackage{fix-cm}
+\documentclass[border=0pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphics}
+\usepackage{tikz,filecontents, pgfplots}
+\pgfplotsset{compat=1.5}
+\usepackage{siunitx}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{pgfplots}
+\usetikzlibrary{positioning,spy}
+\usepackage{amsmath}
+\usetikzlibrary{decorations,decorations.markings,decorations.text}
+\usetikzlibrary{arrows,
+	arrows.meta,
+	decorations.pathmorphing,
+	calc,%
+	decorations.pathmorphing,%
+	decorations.markings,
+	fadings,%
+	shadings,%
+	positioning,
+	spy,
+	shapes,
+	shapes.geometric,
+	shapes.arrows,
+	fit,
+	plotmarks,}
+
+\tikzset{
+	axis break gap/.initial=2mm
+}
+
+\usepackage{tikz-dimline}
+\begin{document}
+\begin{tikzpicture}[spy using outlines={circle,black, ultra thick,connect spies}]
+
+\pgfplotsset{
+	height=2cm,
+	width= 2cm,
+	scale only axis,
+	every axis/.append style = {
+		line width = 0.2mm,
+		tick style = {line width=0.2mm,black},
+		every tick label/.append style={scale=0.5},
+		major tick length = 1.2mm,
+		minor tick length = 0.6mm,
+		%axis line style = thick,
+	},
+	every axis plot/.append style={
+		mark options={scale=0.5,fill=white,line width=0.45pt},
+		line width=1}
+}
+
+
+ \pgfkeys{/pgf/decoration/.cd,
+      distance/.initial=10pt
+}  
+
+
+%%%-------------------------------------------IMAGE AFM AND NSOM---------------------------------%%%
+
+
+
+
+
+\pgfplotsset{
+	compat=newest,
+	/pgfplots/legend image code/.code={%
+		\draw[mark repeat=1,mark phase=1,#1] 
+		plot coordinates {
+			(0cm,0cm) 
+			(0.0cm,0cm)
+			(0.0cm,0cm)
+			(0.0cm,0cm)
+			(0.25cm,0cm)%
+		};
+	},
+}
+
+%======================== Plot ==============================	
+
+
+
+%================SEGUNDA GRAFICA=============================%
+\begin{axis}[%
+ymin=-0.04, ymax=0.085,
+xmin=1,   xmax=3.2,
+height=2cm,
+width=2cm,
+minor x tick num=1,
+minor y tick num=1,
+ytick pos=left,
+xtick pos=left,
+minor x tick num=4,
+xtick = {0,1,2,3,4,5},
+%============== Break Plot ================
+name=top axis,
+anchor=south, yshift=\pgfkeysvalueof{/tikz/axis break gap},
+legend style={yshift=-3pt},
+%========================= legend ================================
+legend style = {at={(0.01,0.98)},
+	anchor=west,
+	nodes={inner sep=2pt,scale=0.4},
+	cells={anchor=center},
+	draw=none, 
+	fill=none,
+	line width =1pt},
+legend cell align=left,
+%=============== Labels =====================
+xlabel ={ X [$\mu$m] },
+every axis x label/.style= {at={(axis description cs:0.5,-0.15)},scale=0.5},
+ylabel ={\selectfont   DRC},
+every axis y label/.style= {at={(axis description cs:-0.15,0.5)},scale=0.5,rotate=90},
+every y tick scale label/.style={at={(axis description cs:-0.16,0.75)},
+	scale=1,
+	rotate=90,
+	inner sep=0pt},
+tick scale binop = \times,
+]
+
+%================================= Add Data ===================================
+
+\pgfplotstableread[col sep=tab]{/mnt/d/OneDrive - Universidad Autonoma de San Luis Potosi - UASLP/Documentos/Gabriela-FR/ANALISIS/2020-PAPER/FIGURES/NSOM_DATADRC.dat}{\mr};
+
+%=================================== Plot ======================================
+\addplot[smooth,blue,line width = 0.2mm] table[x index=0,y index=1,/pgf/number format/read comma as period]{\mr};
+  \draw [dashed,line width = 0.5pt,black](axis cs:0,0.0) node[yshift =0.15cm,font =\fontsize{6}{1}\selectfont,black] {}  -- ( axis cs:5,0);
+  \draw [dashed,line width = 0.5pt,black](axis cs:0,0.036) node[yshift =0.15cm,font =\fontsize{6}{1}\selectfont,black] {}  -- ( axis cs:5,.036);
+%\fill [gray, fill opacity=0.25] (axis cs:1.235,-0.04) rectangle (axis cs:1.51,0.09);
+%\draw[dim={,12pt}]  (234,60) --  (259,60);
+%\draw [black,  -stealth    ] (210,180) -- (233,180) node [right] {};
+%\draw [black,  -stealth    ] (283,180) -- (260,180) node [right] {};
+
+
+\addlegendentry[yshift = -0.3mm,opacity=1]{NSOM Profile};
+
+\end{axis} 	
+
+
+
+
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
+%                                IMAGENES													%
+%+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++%
+
+
+
+
+
+
+
+
+
+
+\end{tikzpicture}
+
+\end{document}

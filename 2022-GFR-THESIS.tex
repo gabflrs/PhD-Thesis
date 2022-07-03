@@ -1,0 +1,53 @@
+\documentclass[a4paper,
+12pt,
+oneside,
+parskip=half,
+numbers=noenddot,
+toc=bibliographynumbered,
+toc=listofnumbered]{scrbook}
+%b5paper
+\input{FILES/PAC}
+\input{FILES/COM}
+
+%\pdfcompresslevel0\textbf{\sqrt{}}
+\begin{document}
+	
+\input{FILES/TITLE_PAGE}{}
+\author
+\let\cleardoublepage\clearpage %
+\frontmatter\pagenumbering{Roman}\label{key}
+\input{FILES/AUTORSHIP}
+\input{FILES/ABSTRACT} 
+\input{FILES/DEDICATION}
+\input{FILES/ACKNOWLEDGMENT} 
+\input{FILES/NOMENCLATURE.tex} 
+\dominitoc
+\dominilof
+\dominilot
+
+\tableofcontents
+\adjustmtc
+\listoffigures
+\listoftables
+\mainmatter
+
+\setcounter{mtc}{5}
+\input{FILES/INTRODUCTION} %motivacion del trabajo
+\input{FILES/CHAPTER1} %physical Background
+\input{FILES/CHAPTER2} %optical techniques
+\input{FILES/CHAPTER3} %experimental results
+\input{FILES/CHAPTER4} %conclusiones and perspectives
+%\input{./Files/CHAPTER2_EXPERIMENTAL_TECHNIQUES_AND_SAMPLE}
+%\input{./Files/CHAPTER3_RESULTS}
+%\input{./Files/CHAPTER4_CONCLUSIONS}
+
+%%
+\appendix%
+\input{FILES/APPENDIX2} %la parte de CdTe
+\input{FILES/APPENDIX1} %el apartado de CuSb
+%\footnotesize
+\nocite{*}
+\bibliographystyle{abbrv}
+\bibliography{FILES/REFERENCES.bib} % Reference bib-library file
+
+\end{document}

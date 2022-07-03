@@ -1,0 +1,230 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{3d}
+\usepackage{parskip}
+\usepackage{tkz-berge}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes}
+
+
+\begin{document}
+	
+			\tdplotsetmaincoords{2.71828+45}{2.71828+45}
+\begin{tikzpicture}
+\begin{scope}[tdplot_main_coords,scale=.1,blue,line width=7pt,line join=round]
+
+\path(-150cm,-150cm)(150cm,150cm);
+	\draw
+	(20.1774,0,-97.9432)--(40.3548,-32.6477,-85.4729)--(73.0026,-20.1774,-65.2955)--(73.0026,20.1774,-65.2955)--(40.3548,32.6477,-85.4729)--cycle
+	(20.1774,0,97.9432)--(40.3548,32.6477,85.4729)--(73.0026,20.1774,65.2955)--(73.0026,-20.1774,65.2955)--(40.3548,-32.6477,85.4729)--cycle
+	(-20.1774,0,97.9432)--(-40.3548,-32.6477,85.4729)--(-73.0026,-20.1774,65.2955)--(-73.0026,20.1774,65.2955)--(-40.3548,32.6477,85.4729)--cycle
+	(-20.1774,0,-97.9432)--(-40.3548,32.6477,-85.4729)--(-73.0026,20.1774,-65.2955)--(-73.0026,-20.1774,-65.2955)--(-40.3548,-32.6477,-85.4729)--cycle
+	(97.9432,20.1774,0)--(85.4729,40.3548,32.6477)--(65.2955,73.0026,20.1774)--(65.2955,73.0026,-20.1774)--(85.4729,40.3548,-32.6477)--cycle
+	(0,97.9432,20.1774)--(32.6477,85.4729,40.3548)--(20.1774,65.2955,73.0026)--(-20.1774,65.2955,73.0026)--(-32.6477,85.4729,40.3548)--cycle
+	(-97.9432,20.1774,0)--(-85.4729,40.3548,-32.6477)--(-65.2955,73.0026,-20.1774)--(-65.2955,73.0026,20.1774)--(-85.4729,40.3548,32.6477)--cycle
+	(0,97.9432,-20.1774)--(-32.6477,85.4729,-40.3548)--(-20.1774,65.2955,-73.0026)--(20.1774,65.2955,-73.0026)--(32.6477,85.4729,-40.3548)--cycle
+	(-97.9432,-20.1774,0)--(-85.4729,-40.3548,32.6477)--(-65.2955,-73.0026,20.1774)--(-65.2955,-73.0026,-20.1774)--(-85.4729,-40.3548,-32.6477)--cycle
+	(0,-97.9432,-20.1774)--(32.6477,-85.4729,-40.3548)--(20.1774,-65.2955,-73.0026)--(-20.1774,-65.2955,-73.0026)--(-32.6477,-85.4729,-40.3548)--cycle
+	(97.9432,-20.1774,0)--(85.4729,-40.3548,-32.6477)--(65.2955,-73.0026,-20.1774)--(65.2955,-73.0026,20.1774)--(85.4729,-40.3548,32.6477)--cycle
+	(0,-97.9432,20.1774)--(-32.6477,-85.4729,40.3548)--(-20.1774,-65.2955,73.0026)--(20.1774,-65.2955,73.0026)--(32.6477,-85.4729,40.3548)--cycle
+	(85.4729,40.3548,-32.6477)--(97.9432,20.1774,0)--(97.9432,-20.1774,0)--(85.4729,-40.3548,-32.6477)--(73.0026,-20.1774,-65.2955)--(73.0026,20.1774,-65.2955)--cycle
+	(85.4729,-40.3548,32.6477)--(97.9432,-20.1774,0)--(97.9432,20.1774,0)--(85.4729,40.3548,32.6477)--(73.0026,20.1774,65.2955)--(73.0026,-20.1774,65.2955)--cycle
+	(-85.4729,40.3548,32.6477)--(-97.9432,20.1774,0)--(-97.9432,-20.1774,0)--(-85.4729,-40.3548,32.6477)--(-73.0026,-20.1774,65.2955)--(-73.0026,20.1774,65.2955)--cycle
+	(-85.4729,-40.3548,-32.6477)--(-97.9432,-20.1774,0)--(-97.9432,20.1774,0)--(-85.4729,40.3548,-32.6477)--(-73.0026,20.1774,-65.2955)--(-73.0026,-20.1774,-65.2955)--cycle
+	(40.3548,32.6477,-85.4729)--(20.1774,0,-97.9432)--(-20.1774,0,-97.9432)--(-40.3548,32.6477,-85.4729)--(-20.1774,65.2955,-73.0026)--(20.1774,65.2955,-73.0026)--cycle
+	(-40.3548,-32.6477,-85.4729)--(-20.1774,0,-97.9432)--(20.1774,0,-97.9432)--(40.3548,-32.6477,-85.4729)--(20.1774,-65.2955,-73.0026)--(-20.1774,-65.2955,-73.0026)--cycle
+	(40.3548,-32.6477,85.4729)--(20.1774,0,97.9432)--(-20.1774,0,97.9432)--(-40.3548,-32.6477,85.4729)--(-20.1774,-65.2955,73.0026)--(20.1774,-65.2955,73.0026)--cycle
+	(-40.3548,32.6477,85.4729)--(-20.1774,0,97.9432)--(20.1774,0,97.9432)--(40.3548,32.6477,85.4729)--(20.1774,65.2955,73.0026)--(-20.1774,65.2955,73.0026)--cycle
+	(32.6477,85.4729,-40.3548)--(0,97.9432,-20.1774)--(0,97.9432,20.1774)--(32.6477,85.4729,40.3548)--(65.2955,73.0026,20.1774)--(65.2955,73.0026,-20.1774)--cycle
+	(-32.6477,85.4729,40.3548)--(0,97.9432,20.1774)--(0,97.9432,-20.1774)--(-32.6477,85.4729,-40.3548)--(-65.2955,73.0026,-20.1774)--(-65.2955,73.0026,20.1774)--cycle
+	(-32.6477,-85.4729,-40.3548)--(0,-97.9432,-20.1774)--(0,-97.9432,20.1774)--(-32.6477,-85.4729,40.3548)--(-65.2955,-73.0026,20.1774)--(-65.2955,-73.0026,-20.1774)--cycle
+	(32.6477,-85.4729,40.3548)--(0,-97.9432,20.1774)--(0,-97.9432,-20.1774)--(32.6477,-85.4729,-40.3548)--(65.2955,-73.0026,-20.1774)--(65.2955,-73.0026,20.1774)--cycle
+	(20.1774,65.2955,-73.0026)--(32.6477,85.4729,-40.3548)--(65.2955,73.0026,-20.1774)--(85.4729,40.3548,-32.6477)--(73.0026,20.1774,-65.2955)--(40.3548,32.6477,-85.4729)--cycle
+	(85.4729,40.3548,32.6477)--(73.0026,20.1774,65.2955)--(40.3548,32.6477,85.4729)--(20.1774,65.2955,73.0026)--(32.6477,85.4729,40.3548)--(65.2955,73.0026,20.1774)--cycle
+	(-73.0026,20.1774,65.2955)--(-40.3548,32.6477,85.4729)--(-20.1774,65.2955,73.0026)--(-32.6477,85.4729,40.3548)--(-65.2955,73.0026,20.1774)--(-85.4729,40.3548,32.6477)--cycle
+	(-85.4729,40.3548,-32.6477)--(-65.2955,73.0026,-20.1774)--(-32.6477,85.4729,-40.3548)--(-20.1774,65.2955,-73.0026)--(-40.3548,32.6477,-85.4729)--(-73.0026,20.1774,-65.2955)--cycle
+	(-85.4729,-40.3548,32.6477)--(-65.2955,-73.0026,20.1774)--(-32.6477,-85.4729,40.3548)--(-20.1774,-65.2955,73.0026)--(-40.3548,-32.6477,85.4729)--(-73.0026,-20.1774,65.2955)--cycle
+	(-20.1774,-65.2955,-73.0026)--(-32.6477,-85.4729,-40.3548)--(-65.2955,-73.0026,-20.1774)--(-85.4729,-40.3548,-32.6477)--(-73.0026,-20.1774,-65.2955)--(-40.3548,-32.6477,-85.4729)--cycle
+	(85.4729,-40.3548,-32.6477)--(65.2955,-73.0026,-20.1774)--(32.6477,-85.4729,-40.3548)--(20.1774,-65.2955,-73.0026)--(40.3548,-32.6477,-85.4729)--(73.0026,-20.1774,-65.2955)--cycle
+	(20.1774,-65.2955,73.0026)--(32.6477,-85.4729,40.3548)--(65.2955,-73.0026,20.1774)--(85.4729,-40.3548,32.6477)--(73.0026,-20.1774,65.2955)--(40.3548,-32.6477,85.4729)--cycle;
+\end{scope}
+
+
+\pgfmathtruncatemacro{\tubelength}{20} % in "double hexagon lengths"
+\pgfmathtruncatemacro{\tubecirumferenceatoms}{20} 
+\pgfmathsetmacro{\tuberadius}{4}
+\newcommand{\carboncolor}{green!80!black}
+\newcommand{\bondcolor}{black}
+\pgfmathsetmacro{\initialrotationangle}{270}
+\pgfmathsetmacro{\atombondlengthfraction}{0.2}
+\newcommand{\bonddrawoptions}{thin}
+
+\begin{scope}[x={(-0.2cm,-0.5cm)}, y={(1cm,0cm)}, z={(0cm,1cm)},rotate=90,xshift=22cm,yshift=-10cm,scale=1.2]
+\foreach \x in {1,...,\tubelength}
+{ \pgfmathsetmacro{\bondlength}{2*3.14159265*\tuberadius/sqrt(3)/\tubecirumferenceatoms}
+	\pgfmathsetmacro{\atomradius}{\bondlength*\atombondlengthfraction}
+	\foreach \y in {1,...,\tubecirumferenceatoms}
+	{   \pgfmathsetmacro{\rotangle}{\y/\tubecirumferenceatoms*360}
+		\pgfmathsetmacro{\ycoord}{cos(\rotangle)*\tuberadius}
+		\pgfmathsetmacro{\zcoord}{sin(\rotangle)*\tuberadius}
+		\pgfmathtruncatemacro{\shadingcolor}{50*cos(\rotangle+\initialrotationangle)+50}
+		\draw[\bonddrawoptions,\bondcolor!\shadingcolor!gray] (\x*3*\bondlength+0.5*\bondlength,\ycoord,\zcoord) -- (\x*3*\bondlength+1.5*\bondlength,\ycoord,\zcoord);
+		\shade[ball color=\carboncolor!\shadingcolor] (\x*3*\bondlength+0.5*\bondlength,\ycoord,\zcoord) circle (\atomradius*1cm) ;
+	}
+	
+	\foreach \y in {1,...,\tubecirumferenceatoms}
+	{
+		\pgfmathsetmacro{\ycoord}{cos(\y/\tubecirumferenceatoms*360)*\tuberadius}
+		\pgfmathsetmacro{\zcoord}{sin(\y/\tubecirumferenceatoms*360)*\tuberadius}
+		\pgfmathsetmacro{\rotangle}{\y/\tubecirumferenceatoms*360+360/2/\tubecirumferenceatoms}
+		\pgfmathsetmacro{\ycoordtwo}{cos(\rotangle)*\tuberadius}
+		\pgfmathsetmacro{\zcoordtwo}{sin(\rotangle)*\tuberadius}
+		\pgfmathsetmacro{\rotanglethree}{\y/\tubecirumferenceatoms*360-360/2/\tubecirumferenceatoms}
+		\pgfmathsetmacro{\ycoordthree}{cos(\rotanglethree)*\tuberadius}
+		\pgfmathsetmacro{\zcoordthree}{sin(\rotanglethree)*\tuberadius}
+		\pgfmathtruncatemacro{\shadingcolor}{50*cos(\rotangle+\initialrotationangle)+50}
+		\draw[\bonddrawoptions,\bondcolor!\shadingcolor!gray] (\x*3*\bondlength+1.5*\bondlength,\ycoord,\zcoord) -- (\x*3*\bondlength+2*\bondlength,\ycoordtwo,\zcoordtwo);
+		\draw[\bonddrawoptions,\bondcolor!\shadingcolor!gray] (\x*3*\bondlength+1.5*\bondlength,\ycoord,\zcoord) -- (\x*3*\bondlength+2*\bondlength,\ycoordthree,\zcoordthree);
+		\shade[ball color=\carboncolor!\shadingcolor] (\x*3*\bondlength+1.5*\bondlength,\ycoord,\zcoord) circle (\atomradius*1cm);
+	}
+	
+	\foreach \y in {1,...,\tubecirumferenceatoms}
+	{   \pgfmathsetmacro{\rotangle}{\y/\tubecirumferenceatoms*360+360/2/\tubecirumferenceatoms}
+		\pgfmathsetmacro{\ycoord}{cos(\rotangle)*\tuberadius}
+		\pgfmathsetmacro{\zcoord}{sin(\rotangle)*\tuberadius}
+		\pgfmathtruncatemacro{\shadingcolor}{50*cos(\rotangle+\initialrotationangle)+50}
+		\draw[\bonddrawoptions,\bondcolor!\shadingcolor!gray] (\x*3*\bondlength+2*\bondlength,\ycoord,\zcoord) -- (\x*3*\bondlength+3*\bondlength,\ycoord,\zcoord);
+		\shade[ball color=\carboncolor!\shadingcolor] (\x*3*\bondlength+2*\bondlength,\ycoord,\zcoord) circle (\atomradius*1cm);
+	}
+	
+	\foreach \y in {1,...,\tubecirumferenceatoms}
+	{   \pgfmathsetmacro{\ycoord}{cos(\y/\tubecirumferenceatoms*360)*\tuberadius}
+		\pgfmathsetmacro{\zcoord}{sin(\y/\tubecirumferenceatoms*360)*\tuberadius}
+		\pgfmathsetmacro{\rotangle}{\y/\tubecirumferenceatoms*360+360/2/\tubecirumferenceatoms}
+		\pgfmathsetmacro{\ycoordtwo}{cos(\rotangle)*\tuberadius}
+		\pgfmathsetmacro{\zcoordtwo}{sin(\rotangle)*\tuberadius}
+		\pgfmathsetmacro{\rotanglethree}{\y/\tubecirumferenceatoms*360-360/2/\tubecirumferenceatoms}
+		\pgfmathsetmacro{\ycoordthree}{cos(\rotanglethree)*\tuberadius}
+		\pgfmathsetmacro{\zcoordthree}{sin(\rotanglethree)*\tuberadius}
+		\pgfmathtruncatemacro{\shadingcolor}{50*cos(\rotangle+\initialrotationangle)+50}
+		\draw[\bonddrawoptions,\bondcolor!\shadingcolor!gray] (\x*3*\bondlength+3.5*\bondlength,\ycoord,\zcoord) -- (\x*3*\bondlength+3*\bondlength,\ycoordtwo,\zcoordtwo);
+		\draw[\bonddrawoptions,\bondcolor!\shadingcolor!gray] (\x*3*\bondlength+3.5*\bondlength,\ycoord,\zcoord) -- (\x*3*\bondlength+3*\bondlength,\ycoordthree,\zcoordthree);
+	}
+	\foreach \y in {1,...,\tubecirumferenceatoms}
+	{ \pgfmathsetmacro{\rotangle}{\y/\tubecirumferenceatoms*360+360/2/\tubecirumferenceatoms}
+		\pgfmathsetmacro{\ycoordtwo}{cos(\rotangle)*\tuberadius}
+		\pgfmathsetmacro{\zcoordtwo}{sin(\rotangle)*\tuberadius}
+		\pgfmathtruncatemacro{\shadingcolor}{50*cos(\rotangle+\initialrotationangle)+50}
+		\shade[ball color=\carboncolor!\shadingcolor] (\x*3*\bondlength+3*\bondlength,\ycoordtwo,\zcoordtwo) circle (\atomradius*1cm);
+	}
+	
+}
+
+\end{scope}
+
+
+
+
+
+
+\begin{scope}[xshift=30cm,yshift=35cm,scale=2]
+% some styles
+\tikzset{
+every node/.style={anchor=west,
+	regular polygon, 
+	regular polygon sides=6,
+	draw,
+	line width=5pt,
+	minimum width=5cm,
+	outer sep=0,
+	}
+}
+\node (A) {};
+\node (B) at (A.corner 1) {B};
+\node (C) at (B.corner 1) {C};
+\node (D) at (A.corner 5) {D};
+\node (E) at (B.corner 5) {};	
+\node (F) at (C.corner 5) {};
+\node (G) at (D.corner 5) {};
+\node (H) at (E.corner 5) {};
+\node (I) at (F.corner 5) {};
+\node (J) at (G.corner 5) {};
+\node (K) at (H.corner 5) {};
+\node (L) at (I.corner 5) {};
+\node (M) at (J.corner 5) {};
+\node (N) at (K.corner 5) {};
+\node (O) at (L.corner 5) {};
+\node (P) at (M.corner 5) {};
+\node (Q) at (N.corner 5) {};
+\node (R) at (O.corner 5) {};
+\foreach \hex in {A,...,R}
+{
+	\foreach \corn in {1,...,6}
+	\draw[ball color=blue!90!white,line width=0.1pt, color=green!90!white] (\hex.corner \corn) circle (7pt); 
+}
+
+\end{scope}
+
+
+\begin{scope}[xshift=78cm,yshift=48cm,scale=5]
+%%%  define vertices with coordinates
+\coordinate (0;0) at (0,0); 
+\foreach \c in {1,...,3}{%  
+	\foreach \i in {0,...,5}{% 
+		\pgfmathtruncatemacro\j{\c*\i}
+		\coordinate (\c;\j) at (60*\i:\c);  
+} }
+\foreach \i in {0,2,...,10}{% 
+	\pgfmathtruncatemacro\j{mod(\i+2,12)} 
+	\pgfmathtruncatemacro\k{\i+1}
+	\coordinate (2;\k) at ($(2;\i)!.5!(2;\j)$) ;}
+
+\foreach \i in {0,3,...,15}{% 
+	\pgfmathtruncatemacro\j{mod(\i+3,18)} 
+	\pgfmathtruncatemacro\k{\i+1} 
+	\pgfmathtruncatemacro\l{\i+2}
+	\coordinate (3;\k) at ($(3;\i)!1/3!(3;\j)$)  ;
+	\coordinate (3;\l) at ($(3;\i)!2/3!(3;\j)$)  ;
+}
+
+%%%%%%%%% draw lines %%%%%%%%
+\foreach \i in {0,...,6}{% 
+	\pgfmathtruncatemacro\k{\i}
+	\pgfmathtruncatemacro\l{15-\i}
+	\draw[line width=3pt,black,loosely dashed] (3;\k)--(3;\l);
+	\pgfmathtruncatemacro\k{9-\i} 
+	\pgfmathtruncatemacro\l{mod(12+\i,18)}   
+	\draw[line width=3pt,black,loosely dashed] (3;\k)--(3;\l); 
+	\pgfmathtruncatemacro\k{12-\i} 
+	\pgfmathtruncatemacro\l{mod(15+\i,18)}   
+	\draw[line width=3pt,black,loosely dashed] (3;\k)--(3;\l);}    
+%%%%%%%%% draw points %%%%%%%% 
+\node[regular polygon, regular polygon sides=6,draw,
+minimum width=2.5cm,
+outer sep=0,very thick,green,fill=white] at (0;0) {};
+\foreach \c in {1,...,3}{%
+	\pgfmathtruncatemacro\k{\c*6-1}    
+	\foreach \i in {0,...,\k}{% 
+		\node[regular polygon, regular polygon sides=6,draw,
+		minimum width=2.5cm	,outer sep=0,very thick,green,fill=white] at (\c;\i) {};
+}}  
+ 
+\end{scope}
+
+\begin{scope}
+\draw[->, >=latex,fill=orange, line width=40pt,rotate=-68,scale=7.79, color=orange, opacity=0.2]
+(0, 0) -- node [black,sloped] {} +(100:10cm);
+\end{scope}
+
+\node[text width=2cm,align=center,scale=7]  at (0,-13) { Fullerene\\1985 };
+\node[text width=4cm,align=center,scale=7]  at (30,3) {Carbon Nanotube\\1991 };
+\node[text width=2cm,align=center,scale=7]  at (55,18) {Graphene\\2004 };
+\node[text width=4cm,align=center,scale=7]  at (78,28) {graphene allotropes\\ undiscovered  \\ for example  $sp-sp^{2}$\\20?? };
+\end{tikzpicture}
+
+
+
+
+    
+\end{document}
