@@ -20,7 +20,29 @@ Graphene has extraordinary thermal, electronic and mechanical properties, which 
 \\
 Given the electronic structure of graphene there are some applications that are not possible, a clear example is when you require a device you need to have an off-on process and that is why semiconductors (considerable gap) are optimal for these technological applications, however graphene has no gap and this makes it impossible to stop the flow of current so it is practically impossible to turn off at any reasonable temperature because in graphene large populations of carriers are easily produced by thermal energy and fluctuations. It is then that arises the search to induce a band gap with these graphene structures has been done much research in this area and we can mention some ways to open the gap in these structures i) applying uniaxial strain \cite{ni2008uniaxial}  ii) by dopants however this modifies the properties of graphene itself as it is a modification in the mobility of the same, iii)Graphene can grow epitaxially on SiC to form ribbons (GNRs) with widths controlled by growth conditions and post-growth annealing procedures \cite{celis2016graphene,baringhaus2014exceptional,sprinkle2010scalable}. The band gap of GNRs is a function of the ribbon width and that is why controlled growth followed by reliable determination of properties such as width and thickness is of fundamental importance to tailor the properties of these nanostructures to specific applications\cite{flores2021optical}.
 
-LA estructura se puede ver como una red trangular con una base de dos atomos por celda unitaria. Los vectores se describen de la siguiente manera: 
+
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.82\linewidth]{FIGURES/Physical_Background/Teoria_Fig5.pdf}
+	\caption{uno-dos}
+	\label{fig:sq-how to reflex}
+\end{figure}
+
+
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.85\linewidth]{FIGURES/Physical_Background/Teo_fig1.pdf}
+	\caption{uno-dos}
+	\label{fig:sq-how to reflex}
+\end{figure}
+
+The structure can be seen as a triangular lattice with a base of two atoms per unit cell. The vectors are described as follows: 
 
 \begin{equation}
 	a_{1}=\frac{a}{2}(3, \sqrt{3}), 
@@ -45,12 +67,11 @@ The atomic structure of carbon allows it to be used in different configurations 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{example-image}
+	\includegraphics[width=0.75\linewidth]{FIGURES/Physical_Background/bands-graphene.png}
 	\caption{a) Band structure of graphene with the respective projections in the $k_y$ and $k_x$ plane, the insight shows the linear dispersion is observed, i.e. near the point $K$ and $K\prime$ (Dirac Point), b)Honeycomb lattice of graphene, showing the unit cell corresponding to two non-equivalent atoms A and B.
 	}
 	\label[figure]{}
 \end{figure}
-
 
 
 \subsubsection{Phonons in graphene}
@@ -59,6 +80,13 @@ The atomic structure of carbon allows it to be used in different configurations 
 In the case of GNRs it is worth mentioning that many of their essential properties have been conducted by the tight-binding model\cite{nakada1996edge,sohmen1992electronic}and the first-principles method\cite{son2006half}. In the former model GNRs in armchair configuration are predicted to be metals and in the latter they are semiconductors for $N_A=3I+2$ where $N_A$ is the number of dimer lines along the transverse direction corresponding to the electronic states of monolayer graphene in the presence of open boundary conditions. The energy gaps are predicted to be inversely proportional to the width of the nano-ribbons, clearly indicating the quantum confinement effect. In addition, the electronic properties are sensitive to the change in the structure of the edges recalling that there are two configurations i)armchair which are the already described in this work and ii) and zigzag\cite{lin2018structure}
 \subsubsection{Nanoribbon structure}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\linewidth]{FIGURES/Physical_Background/Graphene_States.pdf}
+	\caption{uno-dos}
+	\label{fig:sq-how to reflex}
+\end{figure}
+
 \subsubsection{Phonons in nanoribbons}
 
 \section{Most relevant properties}
@@ -66,23 +94,15 @@ In the case of GNRs it is worth mentioning that many of their essential properti
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \subsection{Electronic properties}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.82\linewidth]{FIGURES/Physical_Background/Teoria_Fig5b.pdf}
+	\caption{uno-dos}
+	\label{fig:sq-how to reflex}
+\end{figure}
 
 \section{Theoretical and numerical DFT}
 \vspace{-1cm}
@@ -108,6 +128,30 @@ The objective in this section of the thesis is to use these existing computation
 
 
 
+\subsection{Fist approximation of numerical results}
+\vspace{-1cm}
+
+
+The importance of employed theoretical and numerical models to improve and enhanced the understanding of results in solid and condensed matter physics was evolved by technics as Density Functional Theory. As an increasing computational  capacity, it is enabled to employ more sophisticated numerical approximations taken  DFT as basis. This impact in the experimental area, because provides a guide to carried out experiments and structure design\cite{zangwill2015density} with  possibility to get new properties. By this reason, in this works we consider this technics already implemented  in powerful  open codes and  by simplicity and usefully environment, we use ASE interface\cite{ask2017ase}. Since ASE provides the most useful open tools in atomistic simulations, being that their python programming supply and reduce the extensive work. It is important to remark that the fundamental theory discussion will not be addressed in here, we focus on the models and technics as experimental tools therefore we discuss the results getting it. Due to the little computational resource, we purpose two GNRs  structures computes trough GPAW code\cite{electronic2010enkovaara,real-space2005mortensen}, GPAW is a density-functional theory (DFT) Python code based on the projector-augmented wave (PAW)\cite{rostgaard2006exact,blochlprojector1994}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.50\linewidth]{/media/labfiles/ruco/repos/PhD-Thesis/FIGURES/dft/build-ruco/dft001.pdf}
+	\caption{}
+	\label{fig:intro-dft-structure}
+\end{figure}
+ Taking advantage of ASE environment provides some nanostructures, we take the nanoribbons function, and we adapt in according to our computational resources. \Cref{fig:intro-dft-structure} shown both zigzag and armchair structures consider in our DFT calculations. With the codes employs in our experimental research these the work are becomes friendly, then is easy to get band structure information. The given results are characteristic by these structures, because as well known the edge plays an importantly role of confinement and the consequently properties of GNRs. This approximate results expose the variety of Graphene zoo results, the simplicity of symmetry around of edge modify also properties and characteristics. The importance of calculate the \gls{BS} 
+
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{/media/labfiles/ruco/repos/PhD-Thesis/FIGURES/dft/build-ruco/dft002.pdf}
+	\caption{Structure of armchair GNRs, which are the ones we study throughout this thesis, are schematized with H at the end bonds. }
+	\label{fig:introfig32}
+\end{figure}
+
+
+
 
 \section{Importance of the optical characterization}
 \vspace{-1cm}
@@ -117,3 +161,9 @@ In addition to the interest of graphene layers (from 1 layer up to 10), graphene
 
 \section{Applications}
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{FIGURES/Physical_Background/image07.pdf}
+	\caption{Applications}
+	\label{fig:introfig32}
+\end{figure}

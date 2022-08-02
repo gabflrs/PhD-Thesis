@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{tikz,pgfplots}
+\usepackage{graphicx}
+
+\usepackage{grid-guide}
+\begin{document}
+\begin{tikzpicture}
+    %\draw[labeled grid](0,0) to (8.5,4);   
+\node[anchor=north west,inner sep =0pt,xshift=2mm](i1) at (0,3.5) {\includegraphics[trim=1cm 1cm 1cm 1cm,clip,scale=0.15]{/media/labfiles/Gabriela-FR/Projects/Valeo-Keynote/Images/estrella-frente.jpeg}};
+\node[anchor=north west,inner sep =0pt,xshift=2mm](i2) at (i1.north east) {\includegraphics[trim=3.2cm 6cm 4cm 4cm,clip,scale=0.1]{/media/labfiles/Gabriela-FR/Projects/Valeo-Keynote/Images/nofilo-frente01.jpeg}};
+\node[anchor=north west,inner sep =0pt,xshift=2mm](i3) at (i2.north east) {\includegraphics[trim=1.5cm 3cm 2cm 2cm,clip,scale=0.122]{/media/labfiles/Gabriela-FR/Projects/Valeo-Keynote/Images/usada-nueva.jpeg}};
+\node[anchor=north west,fill=black,text=white,inner sep=0mm] at (i1.north west){(a)};
+\node[anchor=north west,fill=black,text=white,inner sep=0mm] at (i2.north west){(b)};
+\node[anchor=north west,fill=black,text=white,inner sep=0mm] at (i3.north west){(c)};
+    % \node[anchor=north west,inner sep =0pt](i1) at (0,15) {\includegraphics[scale=0.3]{/media/labfiles/Gabriela-FR/Projects/Valeo-Keynote/Images/estrella-frente}};
+    % \node[anchor=north west] at (i1.south west) {\includegraphics[scale=0.3]{/media/labfiles/Gabriela-FR/Projects/Valeo-Keynote/Images/filo-ok-frente01}};
+ \end{tikzpicture}
+\end{document}

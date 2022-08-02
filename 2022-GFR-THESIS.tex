@@ -6,8 +6,8 @@ numbers=noenddot,
 toc=bibliographynumbered,
 toc=listofnumbered]{scrbook}
 %b5paper
-\input{FILES/PAC}
-\input{FILES/COM}
+\input{FILES/packages}
+\input{FILES/commands}
 
 %\pdfcompresslevel0\textbf{\sqrt{}}
 \begin{document}
@@ -20,23 +20,26 @@ toc=listofnumbered]{scrbook}
 \input{FILES/ABSTRACT} 
 \input{FILES/DEDICATION}
 \input{FILES/ACKNOWLEDGMENT} 
-\input{FILES/NOMENCLATURE.tex} 
+%\input{FILES/NOMENCLATURE.tex} 
+
 \dominitoc
 \dominilof
-\dominilot
-
+\dominilot 
 \tableofcontents
-\adjustmtc
+\input{FILES/symbols} % Include the glossary definitions
+\robustify{\gls}
+%\adjustmtc
 \listoffigures
 \listoftables
+\addtocounter{mtc}{2}% manual offset
 \mainmatter
 
-\setcounter{mtc}{5}
+\setcounter{mtc}{8}
 \input{FILES/INTRODUCTION} %motivacion del trabajo
 \input{FILES/CHAPTER1} %physical Background
 \input{FILES/CHAPTER2} %optical techniques
 \input{FILES/CHAPTER3} %experimental results
-\input{FILES/CHAPTER4} %conclusiones and perspectives
+%\input{FILES/CHAPTER4} %conclusiones and perspectives
 %\input{./Files/CHAPTER2_EXPERIMENTAL_TECHNIQUES_AND_SAMPLE}
 %\input{./Files/CHAPTER3_RESULTS}
 %\input{./Files/CHAPTER4_CONCLUSIONS}
@@ -45,6 +48,7 @@ toc=listofnumbered]{scrbook}
 \appendix%
 \input{FILES/APPENDIX2} %la parte de CdTe
 \input{FILES/APPENDIX1} %el apartado de CuSb
+\input{FILES/appendix3} %industries collaborations
 %\footnotesize
 \nocite{*}
 \bibliographystyle{abbrv}
